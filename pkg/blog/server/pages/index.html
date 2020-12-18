@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>少年晓琦的小站</title>
+  </head>
+  <body>
+    <h1>子曰: 君子不器</h1>
+    <hr />
+    <a href=".">Home</a>
+    <hr />
+    {{range .}}
+      <h3><a href="./articles/{{.ID}}">{{.Title}}</a></h3>
+      <p>{{.Author}} {{.CreatedAt.Format "02-01-2006 15:04:05"}}</p>
+      <p>{{.Summary}}</p>
+      <hr />
+    {{end}}
+  </body>
+</html>
