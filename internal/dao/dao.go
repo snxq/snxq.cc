@@ -6,9 +6,9 @@ import (
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 
-	"github.com/snxq/snxq.xyz/pkg/blog/model"
-	"github.com/snxq/snxq.xyz/pkg/blog/server"
-	"github.com/snxq/snxq.xyz/pkg/configs"
+	"github.com/snxq/snxq.cc/internal/configs"
+	"github.com/snxq/snxq.cc/internal/model"
+	"github.com/snxq/snxq.cc/internal/server"
 )
 
 // Dao impl server.Dao

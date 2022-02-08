@@ -3,7 +3,7 @@ package server
 import (
 	"context"
 
-	"github.com/snxq/snxq.xyz/pkg/blog/model"
+	"github.com/snxq/snxq.cc/internal/model"
 )
 
 // Dao data accept object

@@ -5,9 +5,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/snxq/snxq.xyz/pkg/blog/dao"
-	"github.com/snxq/snxq.xyz/pkg/blog/server"
-	"github.com/snxq/snxq.xyz/pkg/configs"
+	"github.com/snxq/snxq.cc/internal/configs"
+	"github.com/snxq/snxq.cc/internal/dao"
+	"github.com/snxq/snxq.cc/internal/server"
 )
 
 var (

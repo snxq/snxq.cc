@@ -33,7 +33,7 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) homeHandler(w http.ResponseWriter, r *http.Request) {
-	file := "pkg/blog/server/pages/index.html"
+	file := "templates/index.html"
 	data, err := s.dao.ArticleQuery(r.Context(), nil)
 	if err != nil {
 		log.Printf("query article failed: %+v", err)
@@ -43,7 +43,7 @@ func (s *Server) homeHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) articleHandler(w http.ResponseWriter, r *http.Request) {
-	file := "pkg/blog/server/pages/article.html"
+	file := "templates/article.html"
 	paths := strings.Split(strings.TrimPrefix(r.URL.Path, "/articles/"), "/")
 	if len(paths) == 0 {
 		http.Redirect(w, r, "/", http.StatusFound)
@@ -60,4 +60,5 @@ func (s *Server) articleHandler(w http.ResponseWriter, r *http.Request) {
 
 func notFoundHandler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusNotFound)
+	// TODO: fill body
 }

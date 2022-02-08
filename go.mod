@@ -1,4 +1,4 @@
-module github.com/snxq/snxq.xyz
+module github.com/snxq/snxq.cc
 
 go 1.15
 

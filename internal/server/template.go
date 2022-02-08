@@ -12,5 +12,5 @@ func templateHandle(file string, w http.ResponseWriter, data interface{}) {
 		log.Printf("parse template file failed: %+v", err)
 		return
 	}
-	tpl.Execute(w, data)
+	_ = tpl.Execute(w, data)
 }
